@@ -22,8 +22,8 @@
     - defaults:
         AGENT-NAME: {{ agent.name }}
         SERVER-URL: {{ serverurl }}
-        SERVICE-ACCOUNT: {{ serviceaccount }}
-        SERVICE-PW: {{ servicepassword }}
+        SERVICE-ACCOUNT: "{{ serviceaccount }}"
+        SERVICE-PW: "{{ servicepassword }}"
 
 {% endfor %}
 
