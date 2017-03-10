@@ -23,6 +23,7 @@
         SERVER-URL: {{ serverurl }}
         SERVICE-ACCOUNT: "{{ serviceaccount }}"
         SERVICE-PW: "{{ pillar['tfs']['password'] }}"
+        LOCALHOST: "{{ grains['localhost'] }}"
 
 {% endfor %}
 
