@@ -1,5 +1,5 @@
 
-{% set sites = [
+{% set agents = [
     {'name': 'Agent1'},
     {'name': 'Agent2'}
     ] %}
