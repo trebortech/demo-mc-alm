@@ -6,7 +6,6 @@
 
 {% set serverurl = 'https://tfsint.mayo.edu/tfs' %}
 {% set serviceaccount = 'mfad\\\\tu05705' %}
-{% set servicepassword = pillar.get('tfs:password', '') %}
 
 {% for agent in agents %}
 "Deploy {{ agent.name }} Agent script":
@@ -23,7 +22,7 @@
         AGENT-NAME: {{ agent.name }}
         SERVER-URL: {{ serverurl }}
         SERVICE-ACCOUNT: "{{ serviceaccount }}"
-        SERVICE-PW: "{{ servicepassword }}"
+        SERVICE-PW: "{{ pillar.get['tfs']['password'] }}"
 
 {% endfor %}
 
