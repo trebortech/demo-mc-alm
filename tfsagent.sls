@@ -22,7 +22,7 @@
         AGENT-NAME: {{ agent.name }}
         SERVER-URL: {{ serverurl }}
         SERVICE-ACCOUNT: "{{ serviceaccount }}"
-        SERVICE-PW: "{{ pillar.get['tfs']['password'] }}"
+        SERVICE-PW: "{{ pillar['tfs']['password'] }}"
 
 {% endfor %}
 
