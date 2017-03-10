@@ -1,7 +1,7 @@
 
 {% set agents = [
-    {'name': 'Agent1'},
-    {'name': 'Agent2'}
+    {'name': 'Agent5'},
+    {'name': 'Agent6'}
     ] %}
 
 {% set serverurl = 'https://tfsint.mayo.edu/tfs' %}
@@ -15,7 +15,8 @@
     - enforce_toplevel: False
 
 "Execute {{ agent.name }} Agent install":
-  cmd.script:
+  file.managed:
+    - name: 'd:\{{ agent.name }}\mayotfs.bat'
     - source: salt://{{ slspath }}/mayotfs.bat
     - template: jinja
     - defaults:
