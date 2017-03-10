@@ -5,7 +5,7 @@
     ] %}
 
 {% set serverurl = 'https://tfsint.mayo.edu/tfs' %}
-{% set serviceaccount = 'mfad\tu05705' %}
+{% set serviceaccount = 'mfad\\tu05705' %}
 {% set servicepassword = pillar.get('tfs.password', '') %}
 
 {% for agent in agents %}
