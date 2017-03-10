@@ -1,7 +1,7 @@
 
 {% set agents = [
-    {'name': 'Agent5'},
-    {'name': 'Agent6'}
+    {'name': 'Agent7'},
+    {'name': 'Agent8'}
     ] %}
 
 {% set serverurl = 'https://tfsint.mayo.edu/tfs' %}
@@ -20,10 +20,10 @@
     - source: salt://{{ slspath }}/mayotfs.bat
     - template: jinja
     - defaults:
-        AGENT-NAME: {{ agent.name }}
-        SERVER-URL: {{ serverurl }}
-        SERVICE-ACCOUNT: "{{ serviceaccount }}"
-        SERVICE-PW: "{{ pillar['tfs']['password'] }}"
+        AGENTNAME: {{ agent.name }}
+        SERVERURL: {{ serverurl }}
+        SERVICEACCOUNT: "{{ serviceaccount }}"
+        SERVICEPW: "{{ pillar['tfs']['password'] }}"
         LOCALHOST: "{{ grains['localhost'] }}"
 
 {% endfor %}
